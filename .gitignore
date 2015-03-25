@@ -1,0 +1,11 @@
+*~
+*.swp
+Makefile
+bin/
+*.user*
+build/
+qrc_shadereffectitem.cpp
+src/*~
+src/*.swp
+qml/*~
+qml/*.swp

@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/qml">
+        <file>qml/content/qmldir</file>
+        <file>qml/mainViewer.qml</file>
+        <file>qml/content/Fps.qml</file>
+        <file>qml/content/ShaderEffectItem.qml</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file>images/spinner.png</file>
+    </qresource>
+</RCC>
