@@ -4,7 +4,7 @@ import "content"
 Rectangle {
 
 	id: shaderEffect
-	width: 1280
+	width: 640
 	height: 422
 	color: "black"
 
