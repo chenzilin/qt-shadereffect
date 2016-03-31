@@ -1,0 +1,6 @@
+*~
+*.swap
+*.user
+bin/
+build/
+Makefile
