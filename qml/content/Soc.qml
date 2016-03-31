@@ -58,7 +58,12 @@ Item {
 
                 if (qt_TexCoord0.y > (level+0.025*sin(wave+qt_TexCoord0.x*2.0*3.141592654))
                     && colorTargetShade != vec4(0.0,0.0,0.0,0.0) ) {
-                    gl_FragColor = colorTargetShade * qt_Opacity;
+
+                    if ((qt_TexCoord0.y-level-0.025*sin(wave+qt_TexCoord0.x*2.0*3.141592654)) < 0.01)
+                        gl_FragColor = colorTargetShade * qt_Opacity *
+                            (qt_TexCoord0.y - level - 0.025*sin(wave+qt_TexCoord0.x*2.0*3.141592654)) * 100.0;
+                    else
+                        gl_FragColor = colorTargetShade * qt_Opacity;
                 }
                 else
                     gl_FragColor = vec4(0.0, 0.0, 0.0, 0.0);
