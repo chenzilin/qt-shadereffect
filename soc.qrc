@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/qml">
+        <file>qml/main.qml</file>
+        <file>qml/content/Soc.qml</file>
+        <file>qml/content/qmldir</file>
+    </qresource>
+    <qresource prefix="/new">
+        <file>images/powerBlue.png</file>
+        <file>images/ball.png</file>
+        <file>images/ribbon.png</file>
+    </qresource>
+</RCC>
