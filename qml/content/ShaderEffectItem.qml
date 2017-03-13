@@ -18,7 +18,7 @@ precision mediump float;
 
 uniform float viewport_width;
 uniform float viewport_height;
-vec3 iResolution = vec3(viewport_width, viewport_height, 0.0);
+//vec3 iResolution = vec3(viewport_width, viewport_height, 0.0);
 
 uniform float iGlobalTime;
 varying highp vec2 qt_TexCoord0;
@@ -85,6 +85,8 @@ vec4 raymarch(vec3 org, vec3 dir)
 
 void main()
 {
+    vec3 iResolution = vec3(viewport_width, viewport_height, 0.0);
+
     float d_xCoord = qt_TexCoord0.x * iResolution.x;
     float d_yCoord = qt_TexCoord0.y * iResolution.y;
 
@@ -104,7 +106,7 @@ void main()
 // **********all .5 , 2. should change to 0.5 , 2.0**********
 
 	 vec2 v = -1.0 + 2.0 * gl_FragCoord.xy / iResolution.xy;
-	 v.x *= iResolution.x/iResolution.y;
+     v.x *= iResolution.x/iResolution.y;
 
 	 vec3 org = vec3(0.0, -2.0, 4.0);
 	 vec3 dir = normalize(vec3(v.x*1.6, -v.y, -1.5));

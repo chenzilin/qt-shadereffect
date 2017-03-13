@@ -9,3 +9,5 @@ src/*~
 src/*.swp
 qml/*~
 qml/*.swp
+.qtquickcompiler/
+shadereffectitem_qtquickcompiler.qrc

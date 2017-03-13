@@ -20,6 +20,7 @@ Item {
 	}
 
 	Text {
+        id: fpsText
 		x: 500
 		text: root.fps + " fps"
 		color: "white"
@@ -28,6 +29,7 @@ Item {
 		styleColor: "#606060"
 		anchors.right: parent.right
 		anchors.verticalCenter: spinnerImage.verticalCenter
+        onTextChanged: console.log("Fps: ", fpsText.text);
 	}
 
 	Timer {

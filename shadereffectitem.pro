@@ -5,6 +5,9 @@ QT += qml quick serialport
 TARGET = shader_effect
 TEMPLATE = app
 
+CONFIG += qtdbcommit
+CONFIG += qtquickcompiler
+
 # Sources and Headers
 SOURCE_FOLDER = src
 SOURCES += $$SOURCE_FOLDER/main.cpp
