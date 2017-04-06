@@ -1,5 +1,5 @@
 # QT Modules
-QT += qml quick serialport
+QT += qml quick
 
 # Target
 TARGET = shader_effect
@@ -19,10 +19,10 @@ OTHER_FILES += qml/mainViewer.qml \
     $$QML_FOLDER/Fps.qml
 
 # Resources
-RESOURCES += shadereffectitem.qrc
+RESOURCES += shadereffect.qrc
 QMAKE_RESOURCE_FLAGS += -no-compress
 
-target.path = /opt/ShaderEffectItem
+target.path = /opt/ShaderEffect
 INSTALLS += target
 
 # Objects Pathes

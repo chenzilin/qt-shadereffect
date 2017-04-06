@@ -1,16 +1,16 @@
 import QtQuick 2.0
 
 ShaderEffect {
-	id: shader
-	width: 400
-	height: 400
+    id: shader
+    width: 400
+    height: 400
 
-	property real viewport_width: width
-	property real viewport_height: height
+    property real viewport_width: width
+    property real viewport_height: height
 
-	property real iGlobalTime: 0
+    property real iGlobalTime: 0
 
-	fragmentShader: "
+    fragmentShader: "
 
 #ifdef GL_ES
 precision mediump float;
@@ -18,7 +18,6 @@ precision mediump float;
 
 uniform float viewport_width;
 uniform float viewport_height;
-//vec3 iResolution = vec3(viewport_width, viewport_height, 0.0);
 
 uniform float iGlobalTime;
 varying highp vec2 qt_TexCoord0;
@@ -105,20 +104,20 @@ void main()
 // **********change your fragColor to gl_FragColor**********
 // **********all .5 , 2. should change to 0.5 , 2.0**********
 
-	 vec2 v = -1.0 + 2.0 * gl_FragCoord.xy / iResolution.xy;
-     v.x *= iResolution.x/iResolution.y;
+    vec2 v = -1.0 + 2.0 * gl_FragCoord.xy / iResolution.xy;
+    v.x *= iResolution.x/iResolution.y;
 
-	 vec3 org = vec3(0.0, -2.0, 4.0);
-	 vec3 dir = normalize(vec3(v.x*1.6, -v.y, -1.5));
+    vec3 org = vec3(0.0, -2.0, 4.0);
+    vec3 dir = normalize(vec3(v.x*1.6, -v.y, -1.5));
 
-	 vec4 p = raymarch(org, dir);
-	 float glow = p.w;
+    vec4 p = raymarch(org, dir);
+    float glow = p.w;
 
-	 vec4 col = mix(vec4(1.0,0.5,0.1,1.0), vec4(0.1,0.5,1.0,1.0), p.y*0.02+0.4);
+    vec4 col = mix(vec4(1.0,0.5,0.1,1.0), vec4(0.1,0.5,1.0,1.0), p.y*0.02+0.4);
 
-	 gl_FragColor = mix(vec4(0.0), col, pow(glow*2.0,4.0));
+    gl_FragColor = mix(vec4(0.0), col, pow(glow*2.0,4.0));
 
-	//gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
+    //gl_FragColor = vec4(0.0, 0.0, 0.0, 1.0);
 
 // **********your main function body code range below**********
 }

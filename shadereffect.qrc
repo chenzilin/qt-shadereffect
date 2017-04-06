@@ -7,5 +7,6 @@
     </qresource>
     <qresource prefix="/images">
         <file>images/spinner.png</file>
+        <file>images/candle.png</file>
     </qresource>
 </RCC>
