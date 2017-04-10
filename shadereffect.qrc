@@ -6,7 +6,7 @@
         <file>qml/content/ShaderEffectItem.qml</file>
     </qresource>
     <qresource prefix="/images">
+        <file>images/sample.png</file>
         <file>images/spinner.png</file>
-        <file>images/candle.png</file>
     </qresource>
 </RCC>

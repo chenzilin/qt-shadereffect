@@ -4,8 +4,8 @@ import "content"
 Rectangle {
 
     id: shaderEffect
-    width: 640
-    height: 422
+    width: 800
+    height: 800
     color: "black"
 
     // only for testing, please comment these two items under release version!
@@ -20,23 +20,28 @@ Rectangle {
         source: "qrc:/qml/qml/content/Fps.qml"
     }
 
-//    Image {
-//        x: 100
-//        y: 600
-//        source: "qrc:/images/images/candle.png"
-//    }
+    Image {
+        x: 10
+        y: 10
+        width: 300
+        height: 300
+        source: "qrc:/images/images/sample.png"
+    }
 
     ShaderEffectItem {
-        id: waterScale
-        x: 20
-        y: 10
+        x: 310
+        y: 310
         width:400
         height: 400
-        iGlobalTime: 0
 
-        NumberAnimation on iGlobalTime {
-            loops: Animation.Infinite; from: 0; to: Math.PI * 2; duration: 6914
+        percent: 0.0
+        source: "qrc:/images/images/sample.png"
+
+        NumberAnimation on percent {
+            from: 0
+            to: 1
+            duration: 4000
+            loops: 1200
         }
-
     }
 }
